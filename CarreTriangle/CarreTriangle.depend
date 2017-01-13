@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1477084707 source:c:\users\johnw\documents\ludus-academie2\lehmann\c\carretriangle\main.c
+	<stdio.h>
+	<stdlib.h>
+

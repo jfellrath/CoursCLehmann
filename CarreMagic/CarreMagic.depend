@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1484313362 source:c:\users\johnw\documents\ludus-academie2\lehmann\c\carremagic\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1484315454 source:c:\users\johnw\documents\programmation\carremagic\main.c
+	<stdio.h>
+	<stdlib.h>
+
