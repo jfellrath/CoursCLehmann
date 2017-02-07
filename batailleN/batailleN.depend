@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1486463724 source:c:\users\johnw\documents\ludus-academie2\lehmann\c\bataillen\main.c
+	<stdio.h>
+	<stdlib.h>
+
