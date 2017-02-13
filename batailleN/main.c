@@ -264,14 +264,6 @@ BOOL verifFlotteCoule(FLOTTE *flotte, int numeroFlotte){
             nbr++;
         }
     }
-    if(nbr == 5){
-        printf("\n\n%d\n\n",nbr);
-        return TRUE;
-    }else{
-        printf("\n\n%d\n\n",nbr);
-        return FALSE;
-    }
-
 }
 
 // Vérifie que le choix de l'utilisateur est correcte et qu'il correspond à un bateau si c'est le cas, le fonction set la cellule d'un bateau à true.
