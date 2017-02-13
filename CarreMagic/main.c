@@ -17,7 +17,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define TAILLE 5 // Définie la taille du carré.
+#define TAILLE 7 // Définie la taille du carré.
 
 typedef int increment; // Pour Incrémenter la variable de la boucle principal.
 
@@ -26,9 +26,9 @@ typedef struct Point{ // La structure coordonnee pour se déplacer dans le tablea
     int y;
 }Point;
 
-void init(int **tab); // Initialise le tableau multi
+void init(int t[][TAILLE]); // Initialise le tableau multi
 
-void affiche(int **tab); // Affiche le tableau en résultat
+void affiche(int t[][TAILLE]); // Affiche le tableau en résultat
 
 void avancer(Point *coord,int test); // Cette fonction déplace les coordonnées X et Y
 
@@ -36,22 +36,12 @@ int verif(int t[][TAILLE],Point coord); // Cette fonction verif qu'une case est 
 
 int main()
 {
-   // int carre[TAILLE][TAILLE];
-   int **carre;
-   int i;
-   carre = malloc(TAILLE*sizeof(int*));
-   for(i=0;i<TAILLE;i++){
-        carre[i] = malloc(TAILLE*sizeof(int*));
-   }
+    int carre[TAILLE][TAILLE];
 
-   init(carre);
-   affiche(carre);
+    Point mPoint;
 
-
-   /* Point mPoint;
-
-    mPoint.x = TAILLE-4;
-    mPoint.y = TAILLE-3;
+    mPoint.x = TAILLE/2-1;
+    mPoint.y = (TAILLE/2);
 
     init(carre);
 
@@ -75,33 +65,32 @@ int main()
             i++;
         }
 
-    }*/
+    }
 
-   // affiche(carre);
+    affiche(carre);
 
     return 0;
 
 }
 
-void init(int **tab){
+void init(int t[][TAILLE]){
 
     increment i,j;
 
     for(i=0;i<TAILLE;i++){
         for(j=0;j<TAILLE;j++){
-            //tab[i,j] = 0;
-            *(tab+i)=0;
+            t[i][j] = 0;
         }
     }
 }
 
-void affiche(int **tab){
+void affiche(int t[][TAILLE]){
 
     increment i,j;
 
     for(i=0;i<TAILLE;i++){
         for(j=0;j<TAILLE;j++){
-           printf("%d  ",tab+i);
+            printf("%d  ",t[i][j]);
         }
         printf("\n");
     }
